@@ -71,7 +71,7 @@ def use_config(
         # It does not affect the actual function implementation.
         # So, a caller can be confused how to pass parameters to
         # the function with modified signature.
-        sig = signature(cmd)
+        sig = signature(cmd, eval_str=True)
 
         config_param = Parameter(
             param_name,
